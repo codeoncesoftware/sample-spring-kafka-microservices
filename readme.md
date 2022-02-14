@@ -1,7 +1,7 @@
 # Distributed Transactions in Microservices with IOEvent ;)
 
 ## Description
-By adapting the folowing example, We illustrate step by step how we can simply code transactions (saga pattern ) using IOEvents.
+By adapting the folowing example, We illustrate step by step how we can simply code distributed transactions (saga pattern ) using IOEvents.
 
 All with a powerful cookpit to supervise and monitor Transaction (Flows) in production.
 
