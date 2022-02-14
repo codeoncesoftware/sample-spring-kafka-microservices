@@ -13,8 +13,8 @@ In this project we adapted the code using our framework by making these basic ch
 1.Remove kafka and kafka-streams dependency and add IOEvent starter dependency to Microservices ( order-service , payment-service and stock-service)   : 
 
 		<dependency>
-			<groupId>com.ioevent</groupId>
-			<artifactId>ioevent-starter</artifactId>
+			<groupId>io.ioevent</groupId>
+			<artifactId>ioevent-spring-boot-starter</artifactId>
 			<version>1.0.0-beta</version>
 		</dependency>
 		 
