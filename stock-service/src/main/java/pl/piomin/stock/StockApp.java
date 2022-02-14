@@ -1,22 +1,22 @@
 package pl.piomin.stock;
 
+import java.util.Random;
+
+import javax.annotation.PostConstruct;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.kafka.annotation.EnableKafka;
-import org.springframework.kafka.annotation.KafkaListener;
-import pl.piomin.base.domain.Order;
+
+import com.ioevent.starter.annotations.EnableIOEvent;
+
 import pl.piomin.stock.domain.Product;
 import pl.piomin.stock.repository.ProductRepository;
-import pl.piomin.stock.service.OrderManageService;
-
-import javax.annotation.PostConstruct;
-import java.util.Random;
 
 @SpringBootApplication
-@EnableKafka
+@EnableIOEvent
 public class StockApp {
 
     private static final Logger LOG = LoggerFactory.getLogger(StockApp.class);
@@ -25,17 +25,7 @@ public class StockApp {
         SpringApplication.run(StockApp.class, args);
     }
 
-    @Autowired
-    OrderManageService orderManageService;
 
-    @KafkaListener(id = "orders", topics = "orders", groupId = "stock")
-    public void onEvent(Order o) {
-        LOG.info("Received: {}" , o);
-        if (o.getStatus().equals("NEW"))
-            orderManageService.reserve(o);
-        else
-            orderManageService.confirm(o);
-    }
 
     @Autowired
     private ProductRepository repository;

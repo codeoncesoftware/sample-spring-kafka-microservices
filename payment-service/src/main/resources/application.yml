@@ -1,15 +1,17 @@
 spring.application.name: customer
 spring.kafka:
-  bootstrap-servers: 127.0.0.1:56820
-  consumer:
-    key-deserializer: org.apache.kafka.common.serialization.LongDeserializer
-    value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-    properties:
-      spring.json.trusted.packages: "*"
-  producer:
-    key-serializer: org.apache.kafka.common.serialization.LongSerializer
-    value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-
-spring.output.ansi.enabled: ALWAYS
-
-logging.pattern.console: "%clr(%d{HH:mm:ss.SSS}){blue} %clr(---){faint} %clr([%15.15t]){yellow} %clr(:){red} %clr(%m){faint}%n"
+  bootstrap-servers: localhost:29092
+ioevent:
+    prefix: DistributedTransactions
+    group_id: payment
+    api_key: 7e3f052e-1bcc-4077-a713-aab44d5b1117 
+    eureka:
+      enabled: true
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+server:
+  port: 8085
