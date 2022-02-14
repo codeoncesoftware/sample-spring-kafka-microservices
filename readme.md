@@ -1,4 +1,4 @@
-# IOEvent Version of Microservices with Spring Boot and Kafka Demo Project
+# Distributed Transactions in Microservices with IOEvent ;)
 
 ## Description
 This repository is used as the IOEvent Version of the example for the following articles:
