@@ -1,14 +1,16 @@
 # Distributed Transactions in Microservices with IOEvent ;)
 
 ## Description
-This repository is used as the IOEvent Version of the example for the following articles:
+By adapting the folowing example, We illustrate step by step how we can simply code transactions (saga pattern ) using IOEvents.
 
-1. [Distributed Transactions in Microservices with Kafka Streams and Spring Boot](https://piotrminkowski.com/2022/01/24/distributed-transactions-in-microservices-with-kafka-streams-and-spring-boot/)
+All with a powerful cookpit to supervise and monitor Transaction (Flows) in production.
 
-In this project we are modifying the original code using our framework (IOEvent) to get simpler code that serves the same purpose as the initial project
-## Basic changes
+<img width="1351" alt="image" src="https://user-images.githubusercontent.com/4980226/153960774-f9652ac5-2f0e-40b1-b8ca-891e4ab15929.png">
 
-In this project we adapted the code using our framework by making these basic changes on each microservice: 
+
+[Distributed Transactions in Microservices with Kafka Streams and Spring Boot](https://piotrminkowski.com/2022/01/24/distributed-transactions-in-microservices-with-kafka-streams-and-spring-boot/)
+
+## Step by Step - Changes
 
 1.Remove kafka and kafka-streams dependency and add IOEvent starter dependency to Microservices ( order-service , payment-service and stock-service)   : 
 
