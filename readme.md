@@ -103,6 +103,16 @@ we make the same change on both microservices Service with changing just the nam
 
 ## Conclusion
 
-In this project we adapted the Distributed Transactions artical code with **IOEvent** , we reached the same purpose with less code and less configuration , thanks to **IOEvent** we can connect microservices with a fast and simple way using annotations also we can supervise our microservices using **IOEvent-Admin** to display the IOFLOW diagram created by annotation and supervise instances executed.
+In this project we adapted the Distributed Transactions artical code with **IOEvent** , we reached the same purpose with less code and less configuration , thanks to **IOEvent** we can connect microservices with a fast and simple way using annotations also we can supervise our microservices using **IOEvent-cookpit** :
+
+- to display the IOFLOW diagram created by annotations:
 
 ![image](https://raw.githubusercontent.com/codeoncesoftware/sample-spring-kafka-microservices/IOEvent-version/img/run%202.PNG)
+
+- supervise instances executed in each task:
+
+![image](https://raw.githubusercontent.com/codeoncesoftware/sample-spring-kafka-microservices/IOEvent-version/img/view%20Property%20(instances).PNG)
+ 
+- get information of each instances executed:
+
+![image](https://raw.githubusercontent.com/codeoncesoftware/sample-spring-kafka-microservices/IOEvent-version/img/view%20Property%20(Advanced%20instances%20Info).PNG)
